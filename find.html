@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Senior Care</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #3399cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    main {
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .care-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .care-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .care-card img {
+      max-width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .care-card h2 {
+      margin-top: 15px;
+      color: #006699;
+    }
+    .care-card p {
+      font-size: 14px;
+      color: #333;
+    }
+    .price {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #009900;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #3399cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Find Senior Care</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="types-of-care.html">Types of Care</a>
+      <a href="find.html">Find Senior Care</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Choose the Right Care Plan</h1>
+    <div class="care-options">
+      <!-- Personal Care -->
+      <div class="care-card">
+        <img src="https://via.placeholder.com/400x200?text=Personal+Care" alt="Personal Care">
+        <h2>Personal Care</h2>
+        <p>Support with bathing, grooming, and daily hygiene activities.</p>
+        <div class="price">$25/day or $700/month</div>
+        <a class="btn" href="#">Request Now</a>
+      </div>
+
+      <!-- Companion Care -->
+      <div class="care-card">
+        <img src="https://via.placeholder.com/400x200?text=Companion+Care" alt="Companion Care">
+        <h2>Companion Care</h2>
+        <p>Friendly conversation, emotional support, and shared activities.</p>
+        <div class="price">$20/day or $550/month</div>
+        <a class="btn" href="#">Request Now</a>
+      </div>
+
+      <!-- Nursing Care -->
+      <div class="care-card">
+        <img src="https://via.placeholder.com/400x200?text=Nursing+Care" alt="Nursing Care">
+        <h2>Skilled Nursing</h2>
+        <p>Licensed nurses provide medical care and health monitoring.</p>
+        <div class="price">$50/day or $1400/month</div>
+        <a class="btn" href="#">Request Now</a>
+      </div>
+
+      <!-- Dementia Care -->
+      <div class="care-card">
+        <img src="https://via.placeholder.com/400x200?text=Dementia+Care" alt="Dementia Care">
+        <h2>Dementia Care</h2>
+        <p>Safe and structured support for seniors with memory issues.</p>
+        <div class="price">$45/day or $1250/month</div>
+        <a class="btn" href="#">Request Now</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sewa Care Services. All rights reserved.</p>
+  </footer>
+</body>
+</html>
