@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Start Your Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f9f9f9;
+    }
+    form {
+      background: white;
+      max-width: 400px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .submit-btn {
+      background: #ffffff;
+      border: 2px solid #f4a300;
+      padding: 10px 20px;
+      color: #0077b6;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .submit-btn:hover {
+      background: #f4a300;
+      color: white;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+    .footer {
+      font-size: 0.8em;
+      margin-top: 20px;
+      color: #555;
+    }
+    .footer a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Start your application</h2>
+
+  <form id="applicationForm">
+    <input type="text" id="name" placeholder="Your first and last name">
+    <div class="error" id="nameError"></div>
+
+    <input type="email" id="email" placeholder="Your email address">
+    <div class="error" id="emailError"></div>
+
+    <input type="tel" id="phone" placeholder="Your phone number">
+    <div class="error" id="phoneError"></div>
+
+    <input type="text" id="postal" placeholder="Your postal code">
+    <div class="error" id="postalError"></div>
+
+    <button type="submit" class="submit-btn">SUBMIT</button>
+  </form>
+
+  <div class="footer">
+    By clicking Submit, you agree to our
+    <a href="privacy.html" target="_blank">Privacy Policy</a>. You also consent to receive calls and texts, which may be autodialed, from us and our customer communities. Your consent is not a condition to using our service.
+  </div>
+
+  <script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Clear previous errors
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let postal = document.getElementById("postal").value.trim();
+
+      let hasError = false;
+
+      if (!name) {
+        document.getElementById("nameError").textContent = "Name field is empty.";
+        hasError = true;
+      }
+      if (!email) {
+        document.getElementById("emailError").textContent = "Email field is empty.";
+        hasError = true;
+      }
+      if (!phone) {
+        document.getElementById("phoneError").textContent = "Phone number field is empty.";
+        hasError = true;
+      }
+      if (!postal) {
+        document.getElementById("postalError").textContent = "Postal code field is empty.";
+        hasError = true;
+      }
+
+      if (!hasError) {
+        // You would replace this with an actual POST request to your server
+        alert("Application submitted! You will receive a confirmation email shortly.");
+
+        // Reset the form
+        document.getElementById("applicationForm").reset();
+      }
+    });
+  </script>
+</body>
+</html>
